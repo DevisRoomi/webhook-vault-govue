@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEBHOOK VAULT // INGRESS LEDGER & RETRY DISPATCHER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg-canvas: #0c0d10;
+        --bg-panel: #13151a;
+        --bg-panel-sub: #181b22;
+        --border-wire: #2b303c;
+        --border-wire-strong: #404859;
+        --text-primary: #e6edf3;
+        --text-muted: #7d8590;
+        --text-ghost: #484f58;
+        --accent-amber: #d29922;
+        --accent-green: #3fb950;
+        --accent-red: #f85149;
+        --accent-cyan: #39c5bb;
+        --accent-blue: #58a6ff;
+        
+        --font-mono: 'JetBrains Mono', monospace;
+        --font-serif: 'Newsreader', Georgia, serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: var(--bg-canvas);
+        color: var(--text-primary);
+        font-family: var(--font-mono);
+        font-size: 13px;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg-canvas);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--border-wire);
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--border-wire-strong);
+      }
+
+      /* Editorial Serif typography utility */
+      .font-editorial {
+        font-family: var(--font-serif);
+      }
+
+      /* Raw Wireframe Grid Utility */
+      .wire-box {
+        background: var(--bg-panel);
+        border: 1px solid var(--border-wire);
+      }
+
+      .wire-box-dashed {
+        background: var(--bg-panel);
+        border: 1px dashed var(--border-wire);
+      }
+
+      /* Raw Button Reset */
+      button {
+        font-family: var(--font-mono);
+        border-radius: 0;
+        cursor: pointer;
+        transition: background 0.15s ease, border-color 0.15s ease;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      input, select, textarea {
+        font-family: var(--font-mono);
+        border-radius: 0;
+      }
+
+      /* Animations */
+      @keyframes pulse-subtle {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.4; }
+      }
+      .animate-pulse-subtle {
+        animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
